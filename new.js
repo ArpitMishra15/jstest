@@ -6,3 +6,5 @@ let accountState;
 // accountId = 122334
 
 console.table([accountId, accountEmail, accountCity, password, accountState]);
+
+console.log("Hello is this your database?");
