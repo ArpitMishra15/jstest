@@ -14,7 +14,7 @@ let userEmail;
 
 //symbol, even after same values wont be same
 const id = Symbol('123')
-const anotherId = Symbol('123')
+const anotherId = Symbol('123')             //dataype of symbol is "symbol"
 
 console.log( id === anotherId);
 
@@ -27,7 +27,11 @@ let myObj = {
 
 }
 
-const myFunction = function(){
+const myFunction = function(){                  // Function can also be used as variables in js
     console.log("Hello World!");
 }
 
+console.log(typeof outsideTemp);                
+
+                //non primitive's datatype is always function, 
+                // function's datatype is object function
