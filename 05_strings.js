@@ -25,3 +25,15 @@ const newStringOne = "  arpit   "
 // to trim non required charecters like here; spaces
 console.log(newStringOne);
 console.log(newStringOne.trim());
+
+// for replace and add
+const url = "https://arpitmishra.com/arpit%20mishra"
+
+console.log(url.replace('%20', '-'));
+
+//to ask any querry related to the line 
+console.log(url.includes('arpit'));
+
+//strings to arrays(split)
+const newGamename = 'Arpit-mishra-com'
+console.log(newGamename.split('-'));
