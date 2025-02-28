@@ -13,3 +13,16 @@ console.log(otherNumber.toPrecision(3));    // for precision and rounding off
 
 const hundreds = 10000000
 console.log(hundreds.toLocaleString('en-US'));  // for easy reading large nums, using commas(US type)
+
+//maths
+console.log(Math);
+console.log(Math.abs(-3));                             // prints absolute value
+console.log(Math.round(6.5));                          // for general rounding off
+console.log(Math.ceil(4.5));                           // for choosing larger integer for decimel
+console.log(Math.floor(5.6));                          // for choosing smaller integer for decimal
+console.log(Math.sqrt(625));                           // for getting sqr root of a number
+console.log(Math.cbrt(125));                           // for getting cbrt of a number
+console.log(Math.min(4, 3, 5, 1));                     // for min. value in an array
+console.log(Math.max(43, 65, 21));                     // for max. value in an array
+    
+console.log(Math.random());                            // for(random)any value bw 0 & 1
