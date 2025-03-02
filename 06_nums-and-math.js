@@ -26,3 +26,12 @@ console.log(Math.min(4, 3, 5, 1));                     // for min. value in an a
 console.log(Math.max(43, 65, 21));                     // for max. value in an array
     
 console.log(Math.random());                            // for(random)any value bw 0 & 1
+console.log(Math.random()*10);                         // for random value of digit
+console.log(Math.random()*10 + 1);                     // for values >0
+console.log((Math.randome()*10) + 1);                  // to avoid sequence errors
+
+
+// for max & min
+
+const min = 10
+const max = 20
