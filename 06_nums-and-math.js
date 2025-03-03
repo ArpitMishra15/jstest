@@ -28,10 +28,11 @@ console.log(Math.max(43, 65, 21));                     // for max. value in an a
 console.log(Math.random());                            // for(random)any value bw 0 & 1
 console.log(Math.random()*10);                         // for random value of digit
 console.log(Math.random()*10 + 1);                     // for values >0
-console.log((Math.randome()*10) + 1);                  // to avoid sequence errors
-
+console.log((Math.random()*10) + 1);                   // to avoid sequence errors
+console.log(Math.floor(Math.random()*10) + 1);         // with an integer value rounding off to floor
 
 // for max & min
 
 const min = 10
 const max = 20
+console.log(Math.floor(Math.random() * (max - min + 1) + min)); // for integers bw 10 and 20
