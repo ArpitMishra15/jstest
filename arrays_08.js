@@ -1,6 +1,6 @@
 //Arrays
 
-const myArr = [0, 1, 3, 4, 5, 6]    //arrays in square brackets containing elements and are resizable and not associative
+const myArr = [0, 1, 2, 3, 4, 5, 6]    //arrays in square brackets containing elements and are resizable and not associative
 // Other methods of declaring arrays
 const myheroes = ["shaktiman", "hanuman", "nagraj" ] 
 const myarr2 = new Array(0, 1, 2, 3, 4)
@@ -29,12 +29,12 @@ console.log(newArray);                          // joins the array into string
 console.log(typeof newArray);
 
 //Slice and Splice
-console.log("A", myArr);
-
-const myn1 = myArr.slice(1, 3)
+console.log("A", myArr);                        // array is printed
+const myn1 = myArr.slice(1, 3)                  // array is sliced of index 1 and 2
 
 console.log(myn1);
 console.log("B", myArr)
 
 const myn2 = myArr.splice(1, 3)
-console.log(myn2);
+console.log("C", myArr)
+console.log(myn2);                               // In splice the sliced element is removed 
