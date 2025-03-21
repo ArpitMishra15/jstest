@@ -1,6 +1,8 @@
 //Functions
 // A stack of code that can be used one or many times.
 
+const { use } = require("express/lib/application");
+
 function sayMyName(){
     console.log("A");
     console.log("R");
@@ -64,3 +66,35 @@ function loginUserMsg(username1 /*= "sam"*/ ){                    // If value is
 }
 console.log(loginUserMsg())
 //console.log(loginUserMsg("Arpit"))
+
+
+//
+function calcCartPrice(...numb1){                                  //... is rest operator
+    return numb1
+}
+ console.log(calcCartPrice(200, 300, 500, 100));
+
+ const user = {
+    username: "Arpit",
+    price: 199
+}
+//now to pass object as a fxn
+function handleObject(anyobject){                                           //anyobject is generic so that diff. object can be passed
+    console.log(`Username is ${anyobject.username} and total price is ${anyobject.price}`)
+}
+//handleObject(user)                                                          // here the object is passed
+
+handleObject({                                                                // here a different object can be passed
+    username: "Modi",
+    price   : 199
+})
+
+// How to pass array as a fxn
+const myNewArray = [100, 200, 300, 400]
+
+function returnSecondValue(getArray){
+    return getArray[1]
+}
+//console.log(returnSecondValue(myNewArray));
+console.log(returnSecondValue([100, 200, 300, 400]));                          // or can be passed like this
+
