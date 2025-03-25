@@ -69,7 +69,7 @@ console.log(loginUserMsg())
 
 
 //
-function calcCartPrice(...numb1){                                  //... is rest operator
+function calcCartPrice(...numb1){                                           //... is rest operator
     return numb1
 }
  console.log(calcCartPrice(200, 300, 500, 100));
