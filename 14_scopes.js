@@ -51,5 +51,5 @@ function addOne(num){
 //type 2                                            //the 2nd one will give error if addTwo()is written earlier
 addTwo(3)
 const addTwo = function(num){                       // bcz in 1st it is declared but here it is declared and also it is held in a variable
-    return num + 2
+    return num + 2                                  // sometimes called as expression it can hold any value
 }
