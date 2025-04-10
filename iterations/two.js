@@ -1,14 +1,11 @@
 // while loop
-
 let index = 0
 while ( index <=10 ) {
     console.log(`Value of index is ${index}`);
     index = index + 2
 }
 
-
 // while loop for array
-
 let myArray = ["Spiderman", "Hulk", "Ironman"]
 let arr = 0
 
@@ -19,7 +16,6 @@ while (arr < myArray.length) {
 
 
 // do-while loop                                              // code executes then condition is checked
-
 let score = 1
 do {
     console.log(`Score is ${score}`);
