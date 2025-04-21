@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHAC</title>
+</head>
+<body style="background-color: #212121; color:rgb(140, 187, 22);">
+
+</body>
+
+<script>
+    const div = document.createElement('div')
+    console.log(div);
+    div.className = "main"
+    div.id = Math.round(Math.random() * 10 + 1)
+    div.setAttribute("title", "generated title")
+    div.style.backgroundColor = "grey"
+    div.style.padding = "13px"
+
+    //method 1 of adding
+    //div.innerText = "JAI HIND JAI BHARAT"                             //takes the value and then overwrites 
+
+    //method 2 of adding
+    const addText = document.createTextNode("JAI HIND JAI BHARAT")
+    
+    div.appendChild(addText)
+    
+            // Both of these methods are correct and sometimes people discuss and debate which one is better, which one to use.
+
+// now attach this to the document to its body
+    document.body.appendChild(div)
+
+</script>
+</html>
