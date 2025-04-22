@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHAICO | DOM</title>
+</head>
+<body style="background-color: #212121; color: greenyellow;">
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+<script> 
+    function addLanguage(langName){
+        const li = document.createElement('li');
+        li.innerHTML = `${langName}`
+        document.querySelector('.language').appendChild(li)
+    }
+    addLanguage("Python")
+    addLanguage("typescript")
+// In this method the method is traversing the whole document, which can be tough if large data
+
+
+// Optimized code
+    function addOptiLanguage (langName){
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+
+    }
+    addOptiLanguage("Golang")
+    addOptiLanguage("Kotlin")
+
+    //Edit
+    // Method for small data
+    const secondLang = document.querySelector("li:nth-child(2)")
+    secondLang.innerHTML = "Mojo"
+
+    // Method for very large data
+    const newLi = document.querySelector("li:nth-child(2)")
+    newLi.textContent = "Rojo"
+    secondLang.replaceWith(newLi)
+
+    // Edit method
+    const firstLang = document.querySelector("li:first-child")
+    firstLang.outerHTML = '<li>TypeScript</li>'
+
+    //Remove method
+    const lastLang = document.querySelector("li:last-child")
+    lastLang.remove()
+</script>
+</html>
