@@ -30,13 +30,13 @@
             <li><img width="200px" id ="Mumbai" src="https://images.unsplash.com/photo-1594817060351-8f3de84b7e0e?q
                 =80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Bombay">
             </li>
-            <li> <a style= "color: antiquewhite;" href = "https://unsplash.com/@arpit_15/likes" id="Pictures">Collections</a></li>
+            <li> <a style= "color: antiquewhite;" href = "https://unsplash.com/@arpit_15/likes" id="Collections">Collections</a></li>
         </ul>
     </div>
 </body>
 <script>        // js is a sequential run language
     // document.getElementById('New Delhi').onclick = function(){
-    //     alert("Image is of New Delhi, India")                       // not a bad method but it provides less features.
+    //     alert("Image is of New Delhi, India")                                                     // not a bad method but it provides less features.
     // }
 
     // Basics History
@@ -49,11 +49,33 @@
     //clientX, clientY, screenX, screenY,
     //altkey, ctrlkey, shiftkey, keyCode
     
-    document.getElementById('New Delhi').addEventListener('click', function(e){             // e = event object
+    document.getElementById('New Delhi').addEventListener('click', function(e){                   // e = event object
         //alert("Image from New Delhi")
         console.log(e);
-    }, false)                                                                               // false is default
+    }, false)                                                                                    // false is default
 
-    // Event Propagation-> event bubbling-'false' , event capturing-'' 
+    // Event Propagation-> event bubbling-'false' , event capturing-'true' 
+
+    document.getElementById('Images').addEventListener('click', function(e){
+        console.log("clicked inside the ul")
+    }, true)
+    
+    document.getElementById('Mumbai').addEventListener('click', function(e){                    // 'selected mumbai' will execute first, even though it is also in the 'Images',
+    console.log(" selected Mumbai")                                                             // this is event propagation - bubbling up, as first the inner element is registered
+        //e.stopPropagation()
+    }, true)                                                                                    // and then the whole ul
+
+    //prevent default
+    document.getElementById('Collections').addEventListener
+    ('click', function(e){
+        console.log("Clicked on Collections");                                          
+        e.preventDefault()                                                                      //gets clicked, but the activity gets prevented
+    }, false)
+
+    document.querySelector('#Images').addEventListener
+    ('click', function(e){
+        console.log(e.target.parentNode)
+    })
+
 </script>
 </html>
