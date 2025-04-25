@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Collections</title>
+</head>
+<body style="background-color: #414141; color: antiquewhite;">
+    <h2> Amazing Images</h2>
+    <div>
+        <ul id = "Images">
+            <li><img width="200px" id ="Sunrays" src="https://images.unsplash.com/photo-1505633738715-ebaa78bf4dd1?
+                q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Beaches">
+            </li>
+            <li><img width="200px" id ="Beach" src="https://images.unsplash.com/photo-1593206216275-2408d30438cc?q
+                =80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Sandbeach">
+            </li>
+            <li><img width="200px" id ="Greenery" src="https://images.unsplash.com/photo-1631739967208-65b7af3f955d?q=
+                80&w=1976&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Greenery">
+            </li>
+            <li><img width="200px" id ="New Delhi" src="https://images.unsplash.com/photo-1687824779849-4c04e806eed2?q=
+                80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Mydelhi">
+            </li>
+            <li><img width="200px" id ="Japan" src="https://images.unsplash.com/photo-1626946485492-62abeb12ea0b?q=80&w=2070&auto=
+                format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Japan">
+            </li>
+            <li><img width="200px" id ="Nandi Hills" src="https://images.unsplash.com/photo-1541675154750-0444c7d51e8e?q=
+                80&w=1930&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="NandiHills">
+            </li>
+            <li><img width="200px" id ="Mumbai" src="https://images.unsplash.com/photo-1594817060351-8f3de84b7e0e?q
+                =80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Bombay">
+            </li>
+            <li> <a style= "color: antiquewhite;" href = "https://unsplash.com/@arpit_15/likes" id="Pictures">Collections</a></li>
+        </ul>
+    </div>
+</body>
+<script>        // js is a sequential run language
+    // document.getElementById('New Delhi').onclick = function(){
+    //     alert("Image is of New Delhi, India")                       // not a bad method but it provides less features.
+    // }
+
+    // Basics History
+        //attachEvent() for internet explorer
+        //jQuery - on   used in jQuery
+    // Basics of events to learn
+
+    //time, timestamp, defaultPrevented,
+    //target, toElement, srcElement, currentTarget,
+    //clientX, clientY, screenX, screenY,
+    //altkey, ctrlkey, shiftkey, keyCode
+    
+    document.getElementById('New Delhi').addEventListener('click', function(e){             // e = event object
+        //alert("Image from New Delhi")
+        console.log(e);
+    }, false)                                                                               // false is default
+
+    // Event Propagation-> event bubbling-'false' , event capturing-'' 
+</script>
+</html>
