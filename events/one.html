@@ -60,10 +60,10 @@
         console.log("clicked inside the ul")
     }, true)
     
-    document.getElementById('Mumbai').addEventListener('click', function(e){                    // 'selected mumbai' will execute first, even though it is also in the 'Images',
-    console.log(" selected Mumbai")                                                             // this is event propagation - bubbling up, as first the inner element is registered
-        e.stopPropagation()
-    }, true)                                                                                    // and then the whole ul
+    // document.getElementById('Mumbai').addEventListener('click', function(e){                    // 'selected mumbai' will execute first, even though it is also in the 'Images',
+    // console.log(" selected Mumbai")                                                             // this is event propagation - bubbling up, as first the inner element is registered
+    //     e.stopPropagation()
+    // }, true)                                                                                    // and then the whole ul
 
     //prevent default
     document.getElementById('Collections').addEventListener
@@ -71,13 +71,23 @@
         console.log("Clicked on Collections");                                          
         e.preventDefault()                                                                      //gets clicked, but the activity gets prevented
     }, false)
+// Method 1
+    // document.querySelector('#Images').addEventListener                                            
+    // ('click', function(e){
+    //     console.log(e.target.parentNode);
+    //     let removeIt = e.target.parentNode
+    //     removeIt.remove()                                                    
+    //     //removeIt.parentNode.removeChild(removeIt)
 
-    document.querySelector('#Images').addEventListener
+// Method 2
+document.querySelector('#Images').addEventListener
     ('click', function(e){
         console.log(e.target.parentNode);
-        const removeIt = e.target.parentNode
-        //removeIt.remove()
-        //removeIt.parentNode.removeChild(removeIt)
+        if (e.target.tagName === 'IMG') {
+            console.log(e.target.id);                                                            // not needed but to print id of the target object
+            let removeIt = e.target.parentNode
+        removeIt.remove()
+        }  
 
 
     }, false)
