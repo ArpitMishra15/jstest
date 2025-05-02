@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121;">
+<script>
+    const requestURl = 'https://api.github.com/users/hiteshchoudhary'
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', requestURl)
+    console.log(xhr.readyState);                                        //state is changing, 1->2....
+    xhr.onreadystatechange = function(){
+        console.log(xhr.readyState);
+        if (xhr.readyState === 4) {
+            // console.log(this.responseText);                        // 'this' is in for this current context, responseText returns response 
+            //const data = this.responseText
+            // console.log(data.followers)                            // wouldnt work as the 'typeof' date is strings, most of the time response from web comes in strings
+            //console.log(typeof data);
+            const data = JSON.parse(this.responseText)               // converting the string into JSON data
+            //console.log(typeof data)
+            console.log(data.followers); 
+        }
+    }
+    xhr.send()
+</script>
+    
+</body>
+</html>
